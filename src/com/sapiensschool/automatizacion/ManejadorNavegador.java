@@ -1,5 +1,6 @@
 package com.sapiensschool.automatizacion;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -20,8 +21,17 @@ public class ManejadorNavegador {
 		customDriver.navigate().forward();
 		//Este comando presiona refresca la pagina		
 		customDriver.navigate().refresh();
+		//Vamos a abrir una segunda pestana
+		String firstTab = customDriver.getWindowHandle();
+		System.out.println(firstTab);
+		Integer sizeOfTabs = customDriver.getWindowHandles().size();
+		System.out.println(sizeOfTabs);
+		JavascriptExecutor codeToOpenTab = (JavascriptExecutor)customDriver;
+		codeToOpenTab.executeScript("window.open();");
+		sizeOfTabs = customDriver.getWindowHandles().size();
+		System.out.println(sizeOfTabs);
 		//Este comando cierra la pestana
-		customDriver.close();
+		//customDriver.close();
 	}
 
 }
