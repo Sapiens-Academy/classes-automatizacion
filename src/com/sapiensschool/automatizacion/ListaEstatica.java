@@ -17,7 +17,7 @@ public class ListaEstatica {
 		//here we initialize the object
 		WebElement staticList = customDriver.findElement(By.id("id_contact"));
 		Select selectedList = new Select(staticList);
-		selectedList.selectByIndex(2);
+		selectedList.selectByIndex(4);
 		System.out.println(selectedList.getFirstSelectedOption().getText());
 		Thread.sleep(3000);
 		selectedList.selectByVisibleText("Customer service");
@@ -25,6 +25,8 @@ public class ListaEstatica {
 		Thread.sleep(3000);
 		selectedList.selectByValue("0");
 		System.out.println(selectedList.getFirstSelectedOption().getText());
+		Thread.sleep(3000);
+		
 	}
 
 }

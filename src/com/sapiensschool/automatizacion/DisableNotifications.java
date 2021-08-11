@@ -16,6 +16,7 @@ public class DisableNotifications {
 		WebDriver customDriver = new ChromeDriver(notifications);
 		customDriver.get("https://www.reddit.com/");
 		customDriver.findElement(By.id("header-search-bar")).sendKeys("TestingConcepts");
+		customDriver.close();
 	}
 
 }
