@@ -11,11 +11,11 @@ public class InicioChrome {
 		System.setProperty("webdriver.chrome.driver", "D:\\driversParaNavegadores\\chromedriver.exe");
 		//Here we will create and launch our browser
 		WebDriver customDriver = new ChromeDriver();
-		customDriver.get("https://www.google.com/");
-		customDriver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")).sendKeys("Casos de Prueba");
-		Thread.sleep(3000);
-		customDriver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[2]/div[2]/div[2]/center/input[1]")).click();
-		customDriver.close();
+		customDriver.get("http://automationpractice.com/index.php");
+		//customDriver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")).sendKeys("Casos de Prueba");
+		//Thread.sleep(3000);
+		customDriver.findElement(By.id("header_logo")).click();
+		//customDriver.close();
 	}
 
 }
